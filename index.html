@@ -1,0 +1,226 @@
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعدك البرمجي الذكي المتطور</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">مساعدك البرمجي الذكي المتطور</h1>
+            <p class="subtitle">بيئة تطوير متكاملة مع ذكاء اصطناعي متقدم لإنشاء وتحليل الأكواد بسهولة</p>
+            <div class="global-controls">
+                <button class="btn btn-settings" id="audioSettingsBtn">
+                    <span class="icon">⚙️</span>
+                    إعدادات الصوت
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- قسم إنشاء الكود بالذكاء الاصطناعي -->
+            <section class="code-generator-section">
+                <div class="section-header">
+                    <h2>🤖 مولد الأكواد الذكي</h2>
+                    <div class="section-controls">
+                        <button class="btn btn-audio" id="generatorAudioBtn">
+                            <span class="icon">🔊</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="generator-container">
+                    <div class="prompt-input-section">
+                        <textarea id="codePrompt" placeholder="اكتب وصف الكود الذي تريد إنشاءه...
+
+مثال: 
+- اكتب برنامج حاسبة بسيط
+- أنشئ نظام إدارة المهام
+- برنامج لمعالجة الملفات النصية"></textarea>
+                        <div class="generator-controls">
+                            <button class="btn btn-ai" id="generateCodeBtn">✨ إنشاء الكود</button>
+                            <button class="btn btn-secondary" id="clearPromptBtn">مسح الوصف</button>
+                        </div>
+                    </div>
+                    <div class="generated-code-section" id="generatedCodeSection">
+                        <div class="code-placeholder">
+                            <div class="ai-icon">🎯</div>
+                            <p>اكتب وصف الكود الذي تريده وسيتم إنشاؤه فورًا</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم الدردشة الذكية -->
+            <section class="chat-section">
+                <div class="section-header">
+                    <h2>💬 الدردشة الذكية</h2>
+                    <div class="section-controls">
+                        <button class="btn btn-audio" id="chatAudioBtn">
+                            <span class="icon">🔊</span>
+                        </button>
+                        <button class="btn btn-secondary" id="clearChatBtn">مسح الدردشة</button>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>مرحبًا! أنا Gemini، مساعدك البرمجي الذكي. يمكنني مساعدتك في:</p>
+                                <ul>
+                                    <li>إنشاء أكواد Python مخصصة</li>
+                                    <li>شرح المفاهيم البرمجية</li>
+                                    <li>حل المشاكل التقنية</li>
+                                    <li>تحسين الأكواد الموجودة</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-section">
+                        <div class="chat-input-container">
+                            <textarea id="chatInput" placeholder="اكتب رسالتك هنا..."></textarea>
+                            <button class="btn btn-primary" id="sendChatBtn">إرسال</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- الخطوة الأولى: محرر الأكواد -->
+            <section class="editor-section">
+                <div class="section-header">
+                    <h2>📝 محرر الأكواد</h2>
+                    <div class="section-controls">
+                        <button class="btn btn-audio" id="editorAudioBtn">
+                            <span class="icon">🔊</span>
+                        </button>
+                        <div class="editor-controls">
+                            <button class="btn btn-secondary" id="loadFileBtn">📁 تحميل ملف</button>
+                            <button class="btn btn-secondary" id="saveFileBtn">💾 حفظ الملف</button>
+                            <button class="btn btn-secondary" id="clearEditorBtn">🗑️ مسح الكود</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="editor-container">
+                    <textarea id="codeEditor" placeholder="ابدأ بكتابة الكود الخاص بك هنا...
+
+# مثال بسيط
+def greet(name):
+    return f'مرحبا، {name}!'
+
+print(greet('المطور'))"></textarea>
+                    <input type="file" id="fileInput" accept=".py" hidden>
+                </div>
+            </section>
+
+            <!-- الخطوة الثانية: التنفيذ -->
+            <section class="execution-section">
+                <div class="section-header">
+                    <h2>▶️ تنفيذ الكود</h2>
+                    <div class="section-controls">
+                        <button class="btn btn-audio" id="executionAudioBtn">
+                            <span class="icon">🔊</span>
+                        </button>
+                        <div class="execution-controls">
+                            <button class="btn btn-primary" id="runCodeBtn">▶️ تشغيل الكود</button>
+                            <button class="btn btn-secondary" id="clearOutputBtn">🗑️ مسح الناتج</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <span>الطرفية</span>
+                        <div class="terminal-indicators">
+                            <span class="indicator running" id="runningIndicator">●</span>
+                            <span class="indicator-text" id="statusText">جاهز</span>
+                        </div>
+                    </div>
+                    <div class="terminal-output" id="terminalOutput">
+                        <div class="output-line">مرحبا بك في مساعدك البرمجي الذكي المتطور!</div>
+                        <div class="output-line">قم بكتابة الكود وأضغط على "تشغيل الكود" لرؤية النتائج</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- الخطوة الثالثة: تحليل الكود -->
+            <section class="ai-section">
+                <div class="section-header">
+                    <h2>🧠 تحليل الكود الذكي</h2>
+                    <div class="section-controls">
+                        <button class="btn btn-audio" id="analysisAudioBtn">
+                            <span class="icon">🔊</span>
+                        </button>
+                        <div class="ai-controls">
+                            <button class="btn btn-ai" id="explainCodeBtn">🧠 شرح الكود</button>
+                            <button class="btn btn-ai" id="fixErrorsBtn">🔧 إصلاح الأخطاء</button>
+                            <button class="btn btn-ai" id="optimizeCodeBtn">⚡ تحسين الكود</button>
+                            <button class="btn btn-ai" id="generateTestsBtn">🧪 إنشاء اختبارات</button>
+                            <button class="btn btn-ai" id="securityCheckBtn">🔒 فحص أمني</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-response" id="aiResponse">
+                    <div class="ai-placeholder">
+                        <div class="ai-icon">🤖</div>
+                        <p>مرحبا! أنا مساعد Gemini المدمج</p>
+                        <p>اختر أي من الخيارات أعلاه لأساعدك في تحليل وتطوير الكود الخاص بك</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- نافذة إعدادات الصوت -->
+        <div class="modal-overlay" id="audioSettingsModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>⚙️ إعدادات الصوت</h3>
+                    <button class="close-btn" id="closeAudioSettings">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="setting-group">
+                        <label for="voiceSelect">الصوت المفضل:</label>
+                        <select id="voiceSelect" class="voice-select">
+                            <option value="ar-male">صوت ذكر عربي</option>
+                            <option value="ar-female">صوت أنثى عربي</option>
+                            <option value="en-male">صوت ذكر إنجليزي</option>
+                            <option value="en-female">صوت أنثى إنجليزي</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label for="speedRange">سرعة التشغيل:</label>
+                        <div class="speed-control">
+                            <input type="range" id="speedRange" min="0.5" max="2" step="0.1" value="1" class="speed-slider">
+                            <span id="speedLabel">1.0x</span>
+                        </div>
+                    </div>
+                    <div class="setting-group">
+                        <label for="volumeRange">مستوى الصوت:</label>
+                        <div class="volume-control">
+                            <input type="range" id="volumeRange" min="0" max="1" step="0.1" value="1" class="volume-slider">
+                            <span id="volumeLabel">100%</span>
+                        </div>
+                    </div>
+                    <div class="setting-group">
+                        <label>
+                            <input type="checkbox" id="autoPlayCheckbox" checked>
+                            تشغيل تلقائي عند إنشاء النص
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="saveAudioSettings">حفظ الإعدادات</button>
+                    <button class="btn btn-secondary" id="testAudioSettings">اختبار الصوت</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <p id="loadingText">جاري المعالجة...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
