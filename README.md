@@ -35,3 +35,20 @@ See `requirements.txt` for the list of Python packages used.
 
 ## Extending
 The code is written to allow additional platforms (e.g., Vimeo, Facebook) by adding new classes in `downloader.py`.
+
+## Image Generator Web App
+
+This repository also includes a small FastAPI application for generating images with OpenAI's `gpt-image-1` model. The app exposes a minimal web interface in Arabic that streams the image URL as it becomes available.
+
+### Running the server
+
+1. Create a `.env` file in the project root with your `OPENAI_API_KEY`.
+2. Install the requirements:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Start the server:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+4. Open `http://localhost:8000` in your browser and enter a prompt in Arabic or English.
