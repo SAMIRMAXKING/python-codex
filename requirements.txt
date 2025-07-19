@@ -3,3 +3,7 @@ yt-dlp
 pytube
 requests
 customtkinter
+fastapi
+uvicorn
+openai
+python-dotenv
